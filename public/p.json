@@ -25,7 +25,7 @@
     "discountPrice": 200,
     "name": "Horlicks Junior",
     "category": "Supplements",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/473/242/553/child-face-food-spoon-wallpaper-preview.jpg",
     "description": "Horlicks Junior, a nutritional supplement fortified with essential vitamins and minerals to support overall growth and development in children.",
     "nutrients": {
       "vitamins": ["Vitamin A", "Vitamin C", "Vitamin D"],
@@ -58,7 +58,7 @@
     "discountPrice": 200,
     "name": "Carrot Mash",
     "category": "Vegetables",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/191/174/369/summer-the-sun-glade-child-wallpaper-preview.jpg",
     "description": "Soft mashed carrots, rich in beta-carotene and fiber, ideal for introducing vegetables to your baby's diet.",
     "nutrients": {
       "vitamins": ["Vitamin A", "Vitamin K"],
@@ -92,7 +92,7 @@
     "discountPrice": 200,
     "name": "Mashed Banana",
     "category": "Fruits",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/191/174/369/summer-the-sun-glade-child-wallpaper-preview.jpg",
     "description": "Creamy mashed bananas, packed with potassium and natural sweetness, perfect for early stages of weaning.",
     "nutrients": {
       "vitamins": ["Vitamin B6", "Vitamin C"],
@@ -142,7 +142,7 @@
     "discountPrice": 200,
     "name": "Mashed Avocado",
     "category": "Proteins",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/191/174/369/summer-the-sun-glade-child-wallpaper-preview.jpg",
     "description": "Smooth mashed avocado, a nutritious source of healthy fats, vitamins, and minerals for your baby's brain development.",
     "nutrients": {
       "vitamins": ["Vitamin K", "Vitamin E"],
@@ -175,7 +175,7 @@
     "discountPrice": 200,
     "name": "Lentil Puree",
     "category": "Proteins",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/937/735/645/soup-food-mushroom-spoon-hd-wallpaper-preview.jpg",
     "description": "Smooth puree made from lentils, rich in protein and fiber, supporting muscle development and digestion for your baby.",
     "nutrients": {
       "vitamins": ["Vitamin B", "Vitamin K"],
@@ -192,7 +192,7 @@
     "discountPrice": 200,
     "name": "Mango Puree",
     "category": "Fruits",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/191/174/369/summer-the-sun-glade-child-wallpaper-preview.jpg",
     "description": "Smooth puree made from ripe mangoes, providing natural sweetness and essential vitamins for baby's growth.",
     "nutrients": {
       "vitamins": ["Vitamin C", "Vitamin A"],
@@ -208,7 +208,7 @@
     "price": 270,
     "name": "Barley Porridge",
     "category": "Grains",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/473/242/553/child-face-food-spoon-wallpaper-preview.jpg",
     "description": "Nutritious barley porridge, packed with fiber and essential vitamins and minerals for baby's growth and development.",
     "nutrients": {
       "vitamins": ["Vitamin B", "Vitamin E"],
@@ -225,7 +225,7 @@
     "discountPrice": 200,
     "name": "Plum Puree",
     "category": "Fruits",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/937/735/645/soup-food-mushroom-spoon-hd-wallpaper-preview.jpg",
     "description": "Smooth puree made from ripe plums, providing natural sweetness and essential vitamins for baby's growth.",
     "nutrients": {
       "vitamins": ["Vitamin C", "Vitamin K"],
@@ -241,7 +241,7 @@
     "price": 290,
     "name": "Apple and Cinnamon Puree",
     "category": "Fruits",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/277/600/860/soup-spoon-dish-wallpaper-preview.jpg",
     "description": "Smooth puree made from fresh apples and a hint of cinnamon, offering a delicious taste and essential vitamins for baby's growth.",
     "nutrients": {
       "vitamins": ["Vitamin C", "Vitamin K"],
@@ -273,7 +273,7 @@
     "price": 310,
     "name": "Beetroot Puree",
     "category": "Vegetables",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/937/735/645/soup-food-mushroom-spoon-hd-wallpaper-preview.jpg",
     "description": "Smooth puree made from fresh beetroot, rich in antioxidants and essential vitamins for baby's growth.",
     "nutrients": {
       "vitamins": ["Vitamin C", "Vitamin K"],
@@ -289,7 +289,7 @@
     "price": 320,
     "name": "Carrot and Sweet Potato Mash",
     "category": "Vegetables",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/277/600/860/soup-spoon-dish-wallpaper-preview.jpg",
     "description": "Smooth mash made from carrots and sweet potatoes, rich in beta-carotene and essential vitamins for baby's growth.",
     "nutrients": {
       "vitamins": ["Vitamin A", "Vitamin C"],
@@ -322,7 +322,7 @@
     "price": 340,
     "name": "Banana and Avocado Puree",
     "category": "Fruits",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/277/600/860/soup-spoon-dish-wallpaper-preview.jpg",
     "description": "Smooth puree made from ripe bananas and avocados, providing natural sweetness and essential healthy fats for baby's growth.",
     "nutrients": {
       "vitamins": ["Vitamin C", "Vitamin K"],
@@ -339,7 +339,7 @@
     "discountPrice": 280,
     "name": "Blueberry Puree",
     "category": "Fruits",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/473/242/553/child-face-food-spoon-wallpaper-preview.jpg",
     "description": "Smooth puree made from fresh blueberries, rich in antioxidants and essential vitamins for baby's growth.",
     "nutrients": {
       "vitamins": ["Vitamin C", "Vitamin K"],
@@ -372,7 +372,7 @@
     "discountPrice": 300,
     "name": "Broccoli Puree",
     "category": "Vegetables",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c1.wallpaperflare.com/preview/233/514/459/healthy-pumpkin-soup-top-view.jpg",
     "description": "Smooth puree made from fresh broccoli, rich in antioxidants and essential vitamins for baby's growth.",
     "nutrients": {
       "vitamins": ["Vitamin C", "Vitamin K"],
@@ -405,7 +405,7 @@
     "discountPrice": 320,
     "name": "Cauliflower and Cheese Mash",
     "category": "Vegetables",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c1.wallpaperflare.com/preview/233/514/459/healthy-pumpkin-soup-top-view.jpg",
     "description": "Smooth mash made from cauliflower and cheese, providing a delicious taste and essential nutrients for baby's growth.",
     "nutrients": {
       "vitamins": ["Vitamin C", "Vitamin K"],
@@ -421,7 +421,7 @@
     "price": 400,
     "name": "Apple and Cinnamon Puree",
     "category": "Fruits",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/473/242/553/child-face-food-spoon-wallpaper-preview.jpg",
     "description": "Smooth puree made from fresh apples and a hint of cinnamon, providing natural sweetness and essential nutrients for baby's growth.",
     "nutrients": {
       "vitamins": ["Vitamin C", "Vitamin K"],
@@ -498,13 +498,13 @@
   {
     "id": 31,
     "createdAt": "2024-02-1T00:00:00Z",
-    "isFlash": true,
+    "isFlash": false,
     "discountEndDate": "2024-03-22",
     "price": 450,
     "discountPrice": 370,
     "name": "Blueberry and Pear Puree",
     "category": "Fruits",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/473/242/553/child-face-food-spoon-wallpaper-preview.jpg",
     "description": "Smooth puree made from ripe blueberries and sweet pears, offering a delightful taste and essential nutrients for baby's growth.",
     "nutrients": {
       "vitamins": ["Vitamin C", "Vitamin K"],
@@ -531,13 +531,13 @@
   {
     "id": 33,
     "createdAt": "2024-02-3T00:00:00Z",
-    "isFlash": true,
+    "isFlash": false,
     "discountEndDate": "2024-03-22",
     "price": 470,
     "discountPrice": 380,
     "name": "Banana and Raspberry Puree",
     "category": "Fruits",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/473/242/553/child-face-food-spoon-wallpaper-preview.jpg",
     "description": "Smooth puree made from ripe bananas and juicy raspberries, offering a delicious blend of flavors and essential nutrients for baby's growth.",
     "nutrients": {
       "vitamins": ["Vitamin C", "Vitamin K"],
@@ -564,13 +564,13 @@
   {
     "id": 35,
     "createdAt": "2024-02-4T00:00:00Z",
-    "isFlash": true,
+    "isFlash": false,
     "discountEndDate": "2024-03-22",
     "price": 490,
     "discountPrice": 390,
     "name": "Avocado and Spinach Puree",
     "category": "Vegetables",
-    "image": "https://i.ibb.co/txDgNGr/horlix.webp",
+    "image": "https://c4.wallpaperflare.com/wallpaper/473/242/553/child-face-food-spoon-wallpaper-preview.jpg",
     "description": "Smooth puree made from creamy avocado and nutritious spinach, offering a rich and creamy texture along with essential nutrients for baby's growth.",
     "nutrients": {
       "vitamins": ["Vitamin K", "Vitamin E"],

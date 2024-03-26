@@ -4,7 +4,7 @@ import React from "react";
 
 const page = async () => {
   const res = await fetch(
-    "http://localhost:5000/products"
+    `${process.env.BACKEND_URL}products`
   );
   const data = await res.json();
   return (

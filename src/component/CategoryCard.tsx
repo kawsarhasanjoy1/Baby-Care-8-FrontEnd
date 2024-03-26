@@ -11,7 +11,7 @@ import { TTopCard } from "@/Types/Global";
 
 const CategoryCard = ({ category, product }: TTopCard | any) => {
   const [isHovered, setIsHovered] = useState(false);
-  console.log(product)
+ 
   return (
     <Link
       onMouseEnter={() => setIsHovered(true)}

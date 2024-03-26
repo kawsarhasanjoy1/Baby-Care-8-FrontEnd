@@ -4,10 +4,8 @@ import DetailsCard from "@/component/DetailsCard";
 import React from "react";
 
 const page = async ({ params }: { params: { productId: string } }) => {
-  
-  const res = await fetch(`http://localhost:5000/product/${params.productId}`);
+  const res = await fetch(`${process.env.BACKEND_URL}product/${params.productId}`);
   const data = await res.json();
-  console.log(data)
 
   return (
     <div>

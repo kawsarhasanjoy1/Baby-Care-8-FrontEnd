@@ -6,7 +6,7 @@ import ProductsCard from "@/component/ProductsCard";
 
 const TrendingProduct = async () => {
   const res = await fetch(
-    "http://localhost:5000/products"
+    `${process.env.BACKEND_URL}products`
   );
   const data = await res.json();
   data.sort((a: TProduct, b: TProduct) => b.rating - a.rating);
@@ -29,7 +29,7 @@ const TrendingProduct = async () => {
       </div>
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 mt-10">
         {data.slice(0, 6).map((product: TProduct) => (
-          <ProductsCard key={product?.id} product={product} />
+          <ProductsCard key={product?._id} product={product} />
         ))}
       </div>
     </div>

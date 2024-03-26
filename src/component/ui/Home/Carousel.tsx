@@ -11,7 +11,7 @@ const Carousel = () => {
       des: "Holistic baby care prioritizes comprehensive well-being, integrating nutrition, emotional support, and safe environments to nurture healthy development from infancy.",
     },
     {
-      img: "https://i.ibb.co/RBsdKzm/nanpro.jpg",
+      img: "http://localhost:3000/_next/image?url=https%3A%2F%2Fc4.wallpaperflare.com%2Fwallpaper%2F937%2F735%2F645%2Fsoup-food-mushroom-spoon-hd-wallpaper-preview.jpg&w=640&q=75",
       title: "Nun pro infut formula powder",
       des: "Homemade baby formula, using boiled water and powdered infant formula, can serve as a temporary solution when commercial options are limited, but consult a healthcare professional for safety and nutritional guidance.",
     },

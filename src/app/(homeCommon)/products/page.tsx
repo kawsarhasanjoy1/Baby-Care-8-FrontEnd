@@ -4,7 +4,7 @@ import ProductsCard from "@/component/ProductsCard";
 
 const page = async () => {
   const res = await fetch(
-    "http://localhost:5000/products",
+    `${process.env.BACKEND_URL}products`,
     {
       next: { revalidate: 30 },
     }

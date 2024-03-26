@@ -8,10 +8,10 @@ const BrandDetails = async ({
 }: {
   params: { category: string; brandId: string };
 }) => {
-  console.log(params)
-  const res = await fetch(`http://localhost:5000/product/${params.brandId}`);
+
+  const res = await fetch(`${process.env.BACKEND_URL}product/${params.brandId}`);
   const data = await res.json();
-  console.log(data);
+  
 
   return (
     <div>

@@ -2,12 +2,11 @@ import { TProduct } from "@/Types/Global";
 import BrandCard from "@/component/BrandCard";
 import BrandHeader from "@/component/BrandHeader";
 
+
 const page = async () => {
 
-  const res = await fetch("http://localhost:5000/products");
+  const res = await fetch(`${process.env.BACKEND_URL}products`);
   const data = await res.json();
-
-  const filter = data.filter((brand: TProduct) => brand.isFlash === false);
 
   return (
     <div>

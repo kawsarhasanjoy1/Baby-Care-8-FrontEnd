@@ -7,7 +7,7 @@ import SButton from "./ui/Button/SButton";
 
 const DetailsCard = ({ product }: { product: TProduct }) => {
   return (
-    <div className=" md:grid grid-cols-2 gap-10 md:px-0 px-3">
+    <div className=" md:grid grid-cols-2 gap-10 md:px-0 px-3 my-10">
       <div className=" relative">
         <Image
           className=" border md:h-screen object-cover"

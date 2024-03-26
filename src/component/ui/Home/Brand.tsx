@@ -5,7 +5,7 @@ import Link from "next/link";
 import React from "react";
 
 const Brand = async ({}) => {
-  const res = await fetch("http://localhost:5000/products");
+  const res = await fetch(`${process.env.BACKEND_URL}products`);
   const products = await res.json();
 
   return (
