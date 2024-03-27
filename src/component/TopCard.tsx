@@ -26,7 +26,7 @@ const TopCard = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       href={{
-        pathname: `brands/${product?.category}`,
+        pathname: `products`,
         query: { category: product.category },
       }}
       className="w-full border relative space-y-2 text-black col-span-1 cursor-pointer  hover:shadow-xl hover:duration-500 h-[400px] overflow-hidden transition duration-500 ease-in-out"

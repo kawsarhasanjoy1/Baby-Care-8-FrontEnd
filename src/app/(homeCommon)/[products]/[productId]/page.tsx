@@ -3,8 +3,18 @@ import BrandHeader from "@/component/BrandHeader";
 import DetailsCard from "@/component/DetailsCard";
 import React from "react";
 
+export const generateStaticParams = async () => {
+  const res = await fetch(`${process.env.BACKEND_URL}products`);
+  const data = await res.json();
+  return data.slice(0, 10).map((product: TProduct) => ({
+    productId: product._id,
+  }));
+};
+
 const page = async ({ params }: { params: { productId: string } }) => {
-  const res = await fetch(`${process.env.BACKEND_URL}product/${params.productId}`);
+  const res = await fetch(
+    `${process.env.BACKEND_URL}product/${params.productId}`
+  );
   const data = await res.json();
 
   return (

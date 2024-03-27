@@ -4,20 +4,20 @@ import Brand from "@/component/ui/Home/Brand";
 import Carousel from "@/component/ui/Home/Carousel";
 import FlashSale from "@/component/ui/Home/FlashSale";
 import Gallery from "@/component/ui/Home/Gallery";
-import Service from "@/component/ui/Home/Service";
 import TrendingProduct from "@/component/ui/Home/TrendingProduct";
 
-export default function Home() {
+const page = () => {
   return (
-    <div className="">
+    <div className=" space-y-32">
       <Carousel />
       <FlashSale />
       <AboutUs />
       <Brand />
       <Gallery />
       <TrendingProduct />
-      <Service />
       <Contact />
     </div>
   );
-}
+};
+
+export default page;

@@ -16,7 +16,7 @@ const Header = () => {
     <div className=" z-20 fixed w-full ">
       <div className=" flex px-3 text-white font-semibold max-w-[1280px] text-[16px]  bg-[#000000] w-full h-14 mx-auto">
         <div className=" flex items-center">
-          <Link href={""}>
+          <Link href={"/"}>
             <p className=" flex items-center gap-1 text-[32px]">
               {/* <p className=" text-xl flex items-center mb-3">Winter</p> */}
               <Image
@@ -51,10 +51,10 @@ const Header = () => {
               <Link href={"/flash-sale"}>Flash Sale</Link>
               <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
             </li>
-            <li className="group flex  cursor-pointer flex-col">
+            {/* <li className="group flex  cursor-pointer flex-col">
               <Link href={"/brands"}>Brands</Link>
               <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
-            </li>
+            </li> */}
             <li className="group flex  cursor-pointer flex-col">
               <Link href={"/products"}>Products</Link>
               <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
