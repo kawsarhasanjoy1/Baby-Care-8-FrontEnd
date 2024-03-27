@@ -5,9 +5,9 @@ import Button from "@/component/Button";
 import ProductsCard from "@/component/ProductsCard";
 
 const TrendingProduct = async () => {
-  const res = await fetch(
-    `${process.env.BACKEND_URL}products`
-  );
+  const res = await fetch(`${process.env.BACKEND_URL}products`, {
+    next: { revalidate: 30 },
+  });
   const data = await res.json();
   data.sort((a: TProduct, b: TProduct) => b.rating - a.rating);
 
