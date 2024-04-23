@@ -2,10 +2,12 @@ import { useForm } from "@formspree/react";
 import React, { useEffect, useRef } from "react";
 import { useAnimation, motion, useInView } from "framer-motion";
 import toast from "react-hot-toast";
-import { Input } from "@/component/Input/Input";
+import { Input } from "@/component/Forms/Input";
 import SButton from "../Button/SButton";
 import { TiLocationArrow } from "react-icons/ti";
-import TextArea from "@/component/Input/TextArea";
+import TextArea from "@/component/Forms/TextArea";
+import BForm from "@/component/Forms/BForm";
+import { FieldValues } from "react-hook-form";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("xrgwllzg");
@@ -23,7 +25,7 @@ const ContactForm = () => {
     } else {
       controls.start("hidden");
     }
-  }, [inView,controls]);
+  }, [inView, controls]);
 
   const containerVariants = {
     hidden: { opacity: 0, x: -50, rotateY: 180, transition: { duration: 1 } },
@@ -35,32 +37,38 @@ const ContactForm = () => {
     },
   };
 
+  const HandleToSubmit = (data: FieldValues) => {
+    console.log(data)
+  }
+
+
   return (
-    <motion.form
+    <motion.div
       variants={containerVariants}
       ref={ref}
       animate={controls}
       initial="hidden"
-      onSubmit={handleSubmit}
     >
-      <div className="shadow-md  mt-[50px] md:mt-0 md:px-10 px-2 py-6 border rounded-lg space-y-[18px] text-black md:text-white">
-        <div className="form-control w-full">
-          <Input name="Name" type="text" edit="" />
+      <BForm onSubmit={HandleToSubmit}>
+        <div className="shadow-md  mt-[50px] md:mt-0 md:px-10 px-2 py-6 border rounded-lg space-y-[18px] text-black md:text-white">
+          <div className="form-control w-full">
+            <Input name="Name" type="text" edit="" />
+          </div>
+          <div className="form-control w-full ">
+            <Input name="Email" type="email" edit="" />
+          </div>
+          <div className="form-control w-full ">
+            <Input name="Subject" type="text" edit="" />
+          </div>
+          <div className="form-control w-full ">
+            <TextArea name="Message" edit="" type="" />
+          </div>
+          <div className=" text-start">
+            <SButton Icon={TiLocationArrow}>Send</SButton>
+          </div>
         </div>
-        <div className="form-control w-full ">
-          <Input name="Email" type="email" edit="" />
-        </div>
-        <div className="form-control w-full ">
-          <Input name="Subject" type="text" edit="" />
-        </div>
-        <div className="form-control w-full ">
-          <TextArea name="Message" edit="" type=""/>
-        </div>
-        <div className=" text-start">
-          <SButton Icon={TiLocationArrow}>Send</SButton>
-        </div>
-      </div>
-    </motion.form>
+      </BForm>
+    </motion.div>
   );
 };
 

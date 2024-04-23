@@ -4,6 +4,9 @@ import { FaBars } from "react-icons/fa";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useAppDispatch, useAppSelector } from "@/redux/hook";
+import { setUser } from "@/redux/api/features/authSlice";
+import { MdAddShoppingCart } from "react-icons/md";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +14,12 @@ const Header = () => {
   const HandleHeader = () => {
     setIsOpen(!isOpen);
   };
-
+  const dispatch = useAppDispatch();
+  const user = useAppSelector((store) => store?.auth?.user);
+  const HandleToLogOut = () => {
+    dispatch(setUser({ user: null, token: null }));
+  };
+  const isAdmin = "admin";
   return (
     <div className=" z-20 fixed w-full ">
       <div className=" flex px-3 text-white font-semibold max-w-[1280px] text-[16px]  bg-[#000000] w-full h-14 mx-auto">
@@ -36,7 +44,7 @@ const Header = () => {
               {isOpen ? <AiOutlineClose size={25} /> : <FaBars size={25} />}
             </span>
           </div>
-          <div
+          <ul
             className={` md:flex  items-center justify-end  h-14  gap-10 py-2 absolute  md:space-y-0 space-y-4 ${
               isOpen
                 ? "bg-[#000000] z-10 left-0 top-[58px] w-full h-screen px-5 transition-all delay-100 duration-600"
@@ -51,10 +59,7 @@ const Header = () => {
               <Link href={"/flash-sale"}>Flash Sale</Link>
               <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
             </li>
-            {/* <li className="group flex  cursor-pointer flex-col">
-              <Link href={"/brands"}>Brands</Link>
-              <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
-            </li> */}
+
             <li className="group flex  cursor-pointer flex-col">
               <Link href={"/products"}>Products</Link>
               <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
@@ -68,18 +73,34 @@ const Header = () => {
               <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
             </li>
             <li className="group flex  cursor-pointer flex-col">
-              <Link href={"/dashboard/all-products"}>Dashboard</Link>
+              <Link href={`/dashboard/${isAdmin}`}>Dashboard</Link>
               <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
             </li>
             <li className="group flex  cursor-pointer flex-col">
-              <Link href={"/login"}>Login</Link>
+              <Link href={"#"}>
+                <MdAddShoppingCart size={25} />{" "}
+              </Link>
               <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
             </li>
-            <li className="group flex  cursor-pointer flex-col">
-              <Link href={"/register"}>Register</Link>
-              <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
-            </li>
-          </div>
+
+            {user ? (
+              <li className="group flex  cursor-pointer flex-col text-start">
+                <button onClick={HandleToLogOut}>LogOut</button>
+                <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
+              </li>
+            ) : (
+              <div className=" md:flex items-center gap-10 space-y-4 md:space-y-0">
+                <li className="group flex  cursor-pointer flex-col">
+                  <Link href={"/login"}>Login</Link>
+                  <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
+                </li>
+                <li className="group flex  cursor-pointer flex-col">
+                  <Link href={"/register"}>Register</Link>
+                  <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
+                </li>
+              </div>
+            )}
+          </ul>
         </div>
       </div>
     </div>

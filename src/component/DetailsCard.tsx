@@ -1,11 +1,35 @@
+"use client";
 import { TProduct } from "@/Types/Global";
 import Image from "next/image";
 import React from "react";
 import { CgShoppingCart } from "react-icons/cg";
 import Button from "./Button";
 import SButton from "./ui/Button/SButton";
+import { useAppSelector } from "@/redux/hook";
+import { useCrateOrderMutation } from "@/redux/api/orderApi";
+import toast from "react-hot-toast";
 
 const DetailsCard = ({ product }: { product: TProduct }) => {
+  const user = useAppSelector((store) => store?.auth?.user);
+  const [crateOrder] = useCrateOrderMutation();
+  const HandleToAdd = async (product: TProduct) => {
+    const order = {
+      email: user?.email,
+      productId: product?._id,
+      category: product?.category,
+      name: product?.name,
+      price: product?.price,
+      image: product?.image,
+    };
+    try {
+      const res = await crateOrder(order).unwrap();
+      if (res?.acknowledged) {
+        toast.success("Order crated successful");
+      }
+    } catch (err: any) {
+      toast?.error(err?.message);
+    }
+  };
   return (
     <div className=" md:grid grid-cols-2 gap-10 md:px-0 px-3 my-10">
       <div className=" relative">
@@ -34,7 +58,6 @@ const DetailsCard = ({ product }: { product: TProduct }) => {
         </div>
         <hr />
         <div className=" space-y-2">
-         
           <div className=" font-semibold">
             Type: <span className=" font-normal">{product.category}</span>
           </div>
@@ -49,7 +72,9 @@ const DetailsCard = ({ product }: { product: TProduct }) => {
         </div>
         <hr />
         <div className=" flex gap-6">
-          <SButton Icon={CgShoppingCart}>Add to Cart</SButton>
+          <button onClick={() => HandleToAdd(product)}>
+            <SButton Icon={CgShoppingCart}>Add to Cart</SButton>
+          </button>
           <Button className="h-16 w-40">Buy it now</Button>
         </div>
         <hr />

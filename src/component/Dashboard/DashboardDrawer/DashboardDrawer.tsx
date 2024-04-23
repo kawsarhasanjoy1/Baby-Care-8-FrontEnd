@@ -1,13 +1,13 @@
 import Avatar from "@/component/Avatar";
-import SideBar from "@/component/SideBar";
 import Image from "next/image";
 import Link from "next/link";
 import React, { ReactNode } from "react";
+import SideBar from "../SideBar/SideBar";
 
-const layout = ({ children }: { children: ReactNode }) => {
+const DashboardDrawer = ({ children }: { children: ReactNode }) => {
   return (
     <div>
-      <div className=" sticky top-0 bg-gradient bg-black flex justify-between  items-center z-50">
+      <div className=" sticky top-0 bg-gradient bg-black flex justify-between  items-center z-50 px-5">
         <Link href={"/"}>
           <Image
             width={30}
@@ -26,10 +26,10 @@ const layout = ({ children }: { children: ReactNode }) => {
         <div className=" sticky top-0 col-span-2">
           <SideBar />
         </div>
-        <div className=" col-span-9 ml-20 overflow-auto"> {children}</div>
+        <div className=" col-span-10 md:mx-10 mx-2 overflow-auto "> {children}</div>
       </div>
     </div>
   );
 };
 
-export default layout;
+export default DashboardDrawer;

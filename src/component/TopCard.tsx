@@ -29,7 +29,7 @@ const TopCard = ({
         pathname: `products`,
         query: { category: product.category },
       }}
-      className="w-full border relative space-y-2 text-black col-span-1 cursor-pointer  hover:shadow-xl hover:duration-500 h-[400px] overflow-hidden transition duration-500 ease-in-out"
+      className="w-full border relative space-y-2 text-black col-span-1 cursor-pointer  hover:shadow-xl hover:duration-500 h-[400px] overflow-hidden transform transition duration-500 ease-in-out"
     >
       <Image
         className="h-[230px] mx-auto space-y-40 group-hover:scale-110 duration-500"
@@ -60,20 +60,12 @@ const TopCard = ({
         </p>
       </div>
 
-      {/* <p className="absolute text-white top-0 right-2  bg-[#a2e233] px-6  rounded-tl-[50px] rounded-br-[50px]">
-        {`${Math.round(
-          product
-            ? ((product?.price - product?.discountPrice) / product?.price) * 100
-            : ((price - discountPrice) / 230) * 100
-        )}`}
-        %
-      </p> */}
       <p className="absolute text-white top-0 left-2  bg-[#a2e233] px-6  rounded-tl-[50px] rounded-br-[50px]">
         {rating ? `${rating} star` : ""}
       </p>
 
       <div
-        className={`flex justify-center items-center absolute top-[40%] w-full duration-1000 gap-5  ${
+        className={`flex justify-center items-center absolute top-[40%] w-full transition duration-1000 gap-5  ${
           isHovered
             ? " opacity-90 z-10 "
             : " -translate-y-28 hover:opacity-0 z-[-1]"
@@ -87,7 +79,6 @@ const TopCard = ({
           </>
         )}
       </div>
-      
     </Link>
   );
 };

@@ -4,7 +4,7 @@ import DetailsCard from "@/component/DetailsCard";
 import React from "react";
 
 export const generateStaticParams = async () => {
-  const res = await fetch(`${process.env.BACKEND_URL}products`);
+  const res = await fetch(`http://localhost:5000/products`);
   const data = await res.json();
   return data.slice(0, 10).map((product: TProduct) => ({
     productId: product._id.toString(),
