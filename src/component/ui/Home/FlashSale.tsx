@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { TProduct } from "@/Types/Global";
-import Button from "@/component/Button";
+import Button from "@/component/ui/Button/Button";
 import Card from "@/component/FlashCard";
 
 const FlashSale = async () => {

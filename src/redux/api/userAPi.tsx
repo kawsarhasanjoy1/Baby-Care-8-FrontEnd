@@ -16,7 +16,17 @@ const userApi = baseApi.injectEndpoints({
         body: data,
       }),
     }),
+    fetchAllUser: build.query({
+      query: (email) => ({
+        url: `/api/v1/user/${email}`,
+        method: "GET",
+      }),
+    }),
   }),
 });
 
-export const { useCreateUserMutation, useLoginUserMutation } = userApi;
+export const {
+  useCreateUserMutation,
+  useLoginUserMutation,
+  useFetchAllUserQuery,
+} = userApi;

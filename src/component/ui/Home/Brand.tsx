@@ -1,5 +1,5 @@
 import { TProduct } from "@/Types/Global";
-import Button from "@/component/Button";
+import Button from "@/component/ui/Button/Button";
 import TopCard from "@/component/TopCard";
 import Link from "next/link";
 import React from "react";

@@ -46,9 +46,9 @@ const Register = () => {
           resolver={zodResolver(registerSchema)}
         >
           <div className="flex flex-col space-y-4 mb-4">
-            <Input edit="" type="text" name="Name" />
-            <Input edit="" type="email" name="Email" />
-            <Input edit="" type="password" name="Password" />
+            <Input label="Name" edit="" type="text" name="name" />
+            <Input label="Email" edit="" type="email" name="email" />
+            <Input label="Password" edit="" type="password" name="password" />
           </div>
           <div className="flex items-center space-x-2 mb-6 text-sm">
             <p>Do you have account</p>{" "}
@@ -56,10 +56,7 @@ const Register = () => {
               Login now
             </Link>
           </div>
-          <button
-            type="submit"
-            className="inline-flex items-center justify-center rounded-md text-sm font-medium  h-10 px-4 py-2 w-full bg-red-600 text-white"
-          >
+          <button className="inline-flex items-center justify-center rounded-md text-sm font-medium  h-10 px-4 py-2 w-full bg-red-600 text-white">
             REGISTER
           </button>
         </BForm>

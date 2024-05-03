@@ -17,7 +17,7 @@ const BForm = ({ children, onSubmit, defaultValues, resolver }: TForm) => {
   const { handleSubmit } = methods;
 
   const onSubmitHandler = (data: FieldValues) => {
-    console.log(data);
+    console.log(data)
     onSubmit(data);
   };
 

@@ -2,14 +2,21 @@ import { baseApi } from "./baseApi";
 
 const orderApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
-    crateOrder: build.mutation({
+    createOrder: build.mutation({
       query: (data) => ({
-        url: "orders",
+        url: "/order",
         method: "POST",
         body: data,
+      }),
+    }),
+
+    fetchOrder: build.query({
+      query: (email) => ({
+        url: `/order/${email}`,
+        method: "GET",
       }),
     }),
   }),
 });
 
-export const { useCrateOrderMutation } = orderApi;
+export const { useCreateOrderMutation, useFetchOrderQuery } = orderApi;

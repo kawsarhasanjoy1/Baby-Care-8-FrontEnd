@@ -6,10 +6,22 @@ export type TInput = {
   type: string;
   edit: string;
   name: string;
+  label: string;
+};
+export interface TSelectValue {
+  value: string;
+  label: string;
+}
+export type TBSelect = {
+  options: TSelectValue[];
+  edit: string;
+  name: string;
+  label: string;
+  multi?: boolean;
 };
 
 export interface TProduct {
-  _id: number;
+  _id: string;
   createdAt: string;
   discountEndDate: string;
   price: number;
@@ -19,6 +31,7 @@ export interface TProduct {
   image: string;
   isFlash: boolean;
   description: string;
+  stock: number;
   nutrients: {
     vitamins: string[];
     minerals: string[];
@@ -47,3 +60,13 @@ export type TForm = {
 } & TFormConfig;
 
 export type UserRole = keyof typeof USER_ROLE;
+
+export interface TOrder {
+  productId: string;
+  name: string;
+  category: string;
+  price: number;
+  image: string;
+  email: string;
+  quantity: number;
+}

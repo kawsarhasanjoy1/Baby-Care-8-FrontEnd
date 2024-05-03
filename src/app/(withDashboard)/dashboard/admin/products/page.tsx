@@ -1,26 +1,56 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+"use client";
 import { TProduct } from "@/Types/Global";
-import Table from "@/component/Table";
+import Loading from "@/app/loading";
+import ProductTable from "@/component/Dashboard/DashboardDrawer/Admin/Products/ProductTable";
+import {
+  useDeleteProductMutation,
+  useGetProductsQuery,
+} from "@/redux/api/productApi";
 import React from "react";
+import toast from "react-hot-toast";
 
-const page = async () => {
-  const res = await fetch(`${process.env.BACKEND_URL}products`);
-  const data = await res.json();
-
+const page = () => {
+  const { data, isLoading } = useGetProductsQuery(undefined);
+  const [productDelete] = useDeleteProductMutation();
+  const HandleToDelete = async (id: string) => {
+    try {
+      const res = await productDelete(id).unwrap();
+      if (res.acknowledged) {
+        toast.success("Products deleted successful");
+      }
+    } catch (err: any) {
+      toast.error(err?.message);
+    }
+  };
+  const HandleToUp = (id: string) => {
+    console.log(id);
+  };
+  if (isLoading) {
+    return <Loading />;
+  }
   return (
-    <div className=" border w-full mx-auto">
+    <div className="w-full mx-auto ">
       <table className=" w-full mx-auto shadow-md border border-gray-100 my-6">
         <thead>
-          <tr className="bg-[#000000] text-white">
+          <tr className="bg-slate-200 text-black border-b-2 shadow-xl rounded-t-md">
             <th className="py-4 px-6 text-lg text-left border-b">Image</th>
             <th className="py-4 px-6 text-lg text-left border-b">Name</th>
             <th className="py-4 px-6 text-lg text-left border-b">Category</th>
             <th className="py-4 px-6 text-lg text-left border-b">Price</th>
+            <th className="py-4 px-6 text-lg text-left border-b">Stock</th>
+            <th className="py-4 px-6 text-lg border-b text-end">Action</th>
             <th className="py-4 px-6 text-lg border-b text-end">Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className=" bg-slate-100">
           {data.map((product: TProduct) => (
-            <Table key={product?._id} product={product} />
+            <ProductTable
+              HandleToDelete={HandleToDelete}
+              HandleToUp={HandleToUp}
+              key={product?._id}
+              product={product}
+            />
           ))}
         </tbody>
       </table>

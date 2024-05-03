@@ -56,8 +56,13 @@ const LoginPage = () => {
               onSubmit={HandleToLogin}
             >
               <div className="flex flex-col space-y-4 mb-4">
-                <Input edit="" type="email" name="Email" />
-                <Input edit="" type="password" name="Password" />
+                <Input edit="" type="email" name="email" label="Email" />
+                <Input
+                  edit=""
+                  type="password"
+                  name="password"
+                  label="Password"
+                />
               </div>
               <div className="flex items-center space-x-2 mb-6 text-sm">
                 <p>Do you want to crate account</p>{" "}

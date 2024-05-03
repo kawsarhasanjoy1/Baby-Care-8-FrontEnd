@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/component/Button";
+import Button from "@/component/ui/Button/Button";
 import React from "react";
 
 const error = ({

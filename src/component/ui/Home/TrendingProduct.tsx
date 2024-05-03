@@ -1,7 +1,7 @@
 import { TProduct } from "@/Types/Global";
 import React from "react";
 import Link from "next/link";
-import Button from "@/component/Button";
+import Button from "@/component/ui/Button/Button";
 import ProductsCard from "@/component/ProductsCard";
 
 const TrendingProduct = async () => {

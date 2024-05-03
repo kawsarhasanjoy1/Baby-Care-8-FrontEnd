@@ -3,15 +3,16 @@ import { TProduct } from "@/Types/Global";
 import Image from "next/image";
 import React from "react";
 import { CgShoppingCart } from "react-icons/cg";
-import Button from "./Button";
+import Button from "./ui/Button/Button";
 import SButton from "./ui/Button/SButton";
-import { useAppSelector } from "@/redux/hook";
-import { useCrateOrderMutation } from "@/redux/api/orderApi";
+import { useAppDispatch, useAppSelector } from "@/redux/hook";
 import toast from "react-hot-toast";
+import { addToOrder } from "@/redux/api/features/orderSlice";
 
 const DetailsCard = ({ product }: { product: TProduct }) => {
+  const dispatch = useAppDispatch();
   const user = useAppSelector((store) => store?.auth?.user);
-  const [crateOrder] = useCrateOrderMutation();
+
   const HandleToAdd = async (product: TProduct) => {
     const order = {
       email: user?.email,
@@ -22,12 +23,9 @@ const DetailsCard = ({ product }: { product: TProduct }) => {
       image: product?.image,
     };
     try {
-      const res = await crateOrder(order).unwrap();
-      if (res?.acknowledged) {
-        toast.success("Order crated successful");
-      }
+      dispatch(addToOrder({ order: order }));
     } catch (err: any) {
-      toast?.error(err?.message);
+      toast?.error(err?.message || "An error occurred while adding to the order.");
     }
   };
   return (

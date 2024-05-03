@@ -7,7 +7,6 @@ import Image from "next/image";
 import { useAppDispatch, useAppSelector } from "@/redux/hook";
 import { setUser } from "@/redux/api/features/authSlice";
 import { MdAddShoppingCart } from "react-icons/md";
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,9 +15,11 @@ const Header = () => {
   };
   const dispatch = useAppDispatch();
   const user = useAppSelector((store) => store?.auth?.user);
+  const order = useAppSelector((store) => store?.order?.order);
   const HandleToLogOut = () => {
     dispatch(setUser({ user: null, token: null }));
   };
+
   const isAdmin = "admin";
   return (
     <div className=" z-20 fixed w-full ">
@@ -76,15 +77,18 @@ const Header = () => {
               <Link href={`/dashboard/${isAdmin}`}>Dashboard</Link>
               <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
             </li>
-            <li className="group flex  cursor-pointer flex-col">
-              <Link href={"#"}>
-                <MdAddShoppingCart size={25} />{" "}
+            <li className="group flex  cursor-pointer flex-col relative">
+              <Link href={"/checkout"}>
+                <p className=" absolute md:-top-3 md:-right-6 left-6 text-[12px] bg-[#a2e233] px-3 rounded-full">
+                  {order?.length}
+                </p>
+                <MdAddShoppingCart size={20} />{" "}
               </Link>
               <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
             </li>
 
             {user ? (
-              <li className="group flex  cursor-pointer flex-col text-start">
+              <li className="group flex  cursor-pointer flex-col text-start justify-start">
                 <button onClick={HandleToLogOut}>LogOut</button>
                 <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
               </li>

@@ -1,12 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
+import persistReducer from "redux-persist/es/persistReducer";
+import storage from "redux-persist/lib/storage";
 
-interface CounterState {
+interface AuthState {
   user: any;
   token: string | null;
 }
 
 // Define the initial state using that type
-const initialState: CounterState = {
+const initialState: AuthState = {
   user: "",
   token: "",
 };
@@ -25,6 +27,14 @@ export const authSlice = createSlice({
   },
 });
 
-export const { setUser, logOut } = authSlice.actions;
+const cratePersist = {
+  key: "auth",
+  storage,
+};
 
-export default authSlice.reducer;
+export const authPersistReducers = persistReducer(
+  cratePersist,
+  authSlice.reducer
+);
+
+export const { setUser, logOut } = authSlice.actions;
