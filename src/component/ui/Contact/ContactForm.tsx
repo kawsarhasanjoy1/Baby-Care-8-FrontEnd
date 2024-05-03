@@ -52,16 +52,16 @@ const ContactForm = () => {
       <BForm onSubmit={HandleToSubmit}>
         <div className="shadow-md  mt-[50px] md:mt-0 md:px-10 px-2 py-6 border rounded-lg space-y-[18px] text-black md:text-white">
           <div className="form-control w-full">
-            <Input name="Name" type="text" edit="" />
+            <Input label="Name" name="name" type="text" edit="" />
           </div>
           <div className="form-control w-full ">
-            <Input name="Email" type="email" edit="" />
+            <Input label="Email" name="email" type="email" edit="" />
           </div>
           <div className="form-control w-full ">
-            <Input name="Subject" type="text" edit="" />
+            <Input label="Subject" name="subject" type="text" edit="" />
           </div>
           <div className="form-control w-full ">
-            <TextArea name="Message" edit="" type="" />
+            <TextArea label="Message" name="message" edit="" type="" />
           </div>
           <div className=" text-start">
             <SButton Icon={TiLocationArrow}>Send</SButton>

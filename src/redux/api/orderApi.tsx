@@ -10,6 +10,12 @@ const orderApi = baseApi.injectEndpoints({
       }),
     }),
 
+    fetchAllOrder: build.query({
+      query: (email) => ({
+        url: `/order`,
+        method: "GET",
+      }),
+    }),
     fetchOrder: build.query({
       query: (email) => ({
         url: `/order/${email}`,
@@ -19,4 +25,8 @@ const orderApi = baseApi.injectEndpoints({
   }),
 });
 
-export const { useCreateOrderMutation, useFetchOrderQuery } = orderApi;
+export const {
+  useCreateOrderMutation,
+  useFetchOrderQuery,
+  useFetchAllOrderQuery,
+} = orderApi;

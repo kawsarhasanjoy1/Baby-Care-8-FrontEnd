@@ -3,8 +3,11 @@ import BForm from "@/component/Forms/BForm";
 import BSelect from "@/component/Forms/BSelect";
 import { Input } from "@/component/Forms/Input";
 import { clearToOrder, totalPrice } from "@/redux/api/features/orderSlice";
-import { useCreateOrderMutation } from "@/redux/api/orderApi";
-import { useFetchAllUserQuery } from "@/redux/api/userAPi";
+import {
+  useCreateOrderMutation,
+  useFetchAllOrderQuery,
+  useFetchOrderQuery,
+} from "@/redux/api/orderApi";
 import { useAppDispatch, useAppSelector } from "@/redux/hook";
 import React from "react";
 import { FieldValues } from "react-hook-form";
@@ -17,7 +20,7 @@ const CheckOutSummary = () => {
   );
   const email = useAppSelector((store) => store?.auth?.user?.email);
   const order = useAppSelector((store) => store?.order);
-  const { data, isLoading } = useFetchAllUserQuery(email);
+  const { data, isLoading } = useFetchAllOrderQuery(undefined);
   const [createOrder] = useCreateOrderMutation();
   const handleToSubmit = async (e: FieldValues) => {
     const confirmOrder = {
